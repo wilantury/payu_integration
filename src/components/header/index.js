@@ -1,11 +1,13 @@
 import { BiStore, BiUserCircle, BiCartAlt } from 'react-icons/bi';
-import React from 'react';
+import React, { useContext } from 'react';
 import { HeaderWrapper, Logo, DivCart } from './styles'
+import CartContext from '../../context/CartContext'
 
 
 export const Header = () => {
-    
-
+    const {CartData, setCartData} = useContext(CartContext)
+    const reducer = (accumulator, currentValue) => accumulator + currentValue.qty_p;
+    const totalUnits = CartData.reduce(reducer, 0)
     return (
         <HeaderWrapper>
                 <Logo>
@@ -15,7 +17,7 @@ export const Header = () => {
                 <DivCart >
                     <BiUserCircle size='30px' /> 
                     <BiCartAlt size='30px' /> 
-                    <h3>0</h3>
+                    <h3>{totalUnits}</h3>
                 </DivCart>
         </HeaderWrapper>
     )
