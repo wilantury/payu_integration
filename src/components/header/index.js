@@ -15,9 +15,10 @@ export const Header = () => {
                     <p>Antury<br/>e-commerce</p>
                 </Logo>
                 <DivCart >
-                    <BiUserCircle size='30px' /> 
-                    <BiCartAlt size='30px' /> 
+                    <BiUserCircle size='40px' /> 
+                    <BiCartAlt size='40px' color="lightblue" /> 
                     <h3>{totalUnits}</h3>
+                    
                 </DivCart>
         </HeaderWrapper>
     )
