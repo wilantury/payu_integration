@@ -15,7 +15,9 @@ export const CardWrapper = styled.div`
     max-height: 350px;
     & h3, h4 {
         margin-left: 10px;
-        padding: 5px;
+        padding: 0px;
+        margin-bottom: 5px;
+        margin-top: 5px;
     }
     & Img {
         max-height: 150px
@@ -27,6 +29,7 @@ export const AddListWrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 10px;
     & input[type="number"] {
         width: 50px;
         height: 40px;

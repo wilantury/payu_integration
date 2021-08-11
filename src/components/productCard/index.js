@@ -3,14 +3,15 @@ import React from 'react';
 import { CardWrapper, Img, AddListWrapper } from './styles'
 
 
-export const Products = () => {
-    
+export const Products = ( props ) => {
+    const { product } = props;
     return (
         <CardWrapper>
-            <Img src="https://images.freeimages.com/images/large-previews/5fb/wool-1-1530392.jpg">
+            <Img src={product.image}>
             </Img>
-            <h3>Iphone 12</h3>
-            <h4>Cantidad: 10</h4>
+            <h3>{product.name}</h3>
+            <h4>Cantidad: {product.qty}</h4>
+            <h4>Precio: {product.price}</h4>
             <AddListWrapper>
                 <input type="number" placeholder="1"></input>
                 <button>Agregar</button>
