@@ -32,7 +32,7 @@ export const QuickCartList = ( {data} ) => {
 
     var requestOptions = {
         method: 'POST',
-        mode:'no-cors',
+        //mode:'no-cors',
         headers: myHeaders,
         body: urlencoded,
         redirect: 'follow'
