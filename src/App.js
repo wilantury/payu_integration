@@ -6,12 +6,19 @@ import { ProductsList } from './components/productsList'
 import CartContext from '../src/context/CartContext'
 
 function App() {
-  const [CartData, setCartData] = useState([])
-  const value = { CartData, setCartData}
+  const [CartData, setCartData] = useState([]);
+  const value = { CartData, setCartData};
+  const [clickBody, setClickBody] = useState(false);
+
+  function handleClick(){
+    setClickBody(!clickBody);
+  }
   return (
     <CartContext.Provider value={value} >
-      <Header />
-      <ProductsList />
+      <div onClick={handleClick}>
+        <Header clickBody = {clickBody}/>
+        <ProductsList />
+      </div>
     </CartContext.Provider>
   );
 }

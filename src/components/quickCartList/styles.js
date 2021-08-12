@@ -15,6 +15,8 @@ export const CartListWrapper = styled.div`
     & ul {
         list-style: none;
         padding-inline-start:0px;
+        max-height:350px;
+        overflow-y: scroll;
         & li {
             display: grid;
             grid-template-columns: 50% 25% 25%;
@@ -25,4 +27,17 @@ export const CartListWrapper = styled.div`
         width:100%;
         text-align: left;
     }
+`
+
+export const Button = styled.button`
+  color: gray;
+  font-size: 1.2em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid #A6c307;
+  border-radius: 3px;
+  &:hover{
+      color: #A6c307;
+      cursor:pointer;
+  }
 `
