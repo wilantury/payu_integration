@@ -2,8 +2,6 @@ import React from 'react'
 import { Products } from '../productCard'
 import { ListContainer } from './styles'
 
-const API = "http://localhost:8000/api/v1/products/"
-
 const products = [
     {
         id:1,
