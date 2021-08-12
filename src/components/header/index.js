@@ -6,13 +6,13 @@ import { QuickCartList } from '../quickCartList'
 
 
 export const Header = ({clickBody}) => {
-    const {CartData, setCartData} = useContext(CartContext)
+    const {CartData} = useContext(CartContext)
     const [quickViewCart, setQuickViewCart] = useState(false)
     const [clkBdy, setClkBdy] = useState(false)
     const reducer = (accumulator, currentValue) => accumulator + currentValue.qty_p;
     const totalUnits = CartData.reduce(reducer, 0)
 
-    if(clickBody != clkBdy){
+    if(clickBody !== clkBdy){
         setQuickViewCart(false)
         setClkBdy(clickBody)
     }

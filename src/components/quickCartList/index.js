@@ -37,26 +37,26 @@ export const QuickCartList = ( {data} ) => {
         redirect: 'follow'
     };
     
-    const webCheckOut = {
-        "merchantId": 508029,
-        "accountId": 512321,
-        "description": "Test PAYU",
-        "referenceCode": "TestPayUantury2",
-        "amount": 20000,
-        "tax": 0,
-        "taxReturnBase": 0,
-        "currency": "COP",
-        "signature": "f1cae8cb032d5ab62d661c1257b7cd4e",
-        "test": "0",
-        "buyerFullName":"wilson",
-        "shippingAddress":"carrer 10",
-        "shippingCity":"Bogotá",
-        "shippingCountry":"CO",
-        "telephone":"1235657657",
-        "buyerEmail": "test@test.com",
-        "responseUrl": "http://localhost:3000/response",
-        "confirmationUrl": "http://localhost:3000/confirmation"
-    }
+    // const webCheckOut = {
+    //     "merchantId": 508029,
+    //     "accountId": 512321,
+    //     "description": "Test PAYU",
+    //     "referenceCode": "TestPayUantury2",
+    //     "amount": 20000,
+    //     "tax": 0,
+    //     "taxReturnBase": 0,
+    //     "currency": "COP",
+    //     "signature": "f1cae8cb032d5ab62d661c1257b7cd4e",
+    //     "test": "0",
+    //     "buyerFullName":"wilson",
+    //     "shippingAddress":"carrer 10",
+    //     "shippingCity":"Bogotá",
+    //     "shippingCountry":"CO",
+    //     "telephone":"1235657657",
+    //     "buyerEmail": "test@test.com",
+    //     "responseUrl": "http://localhost:3000/response",
+    //     "confirmationUrl": "http://localhost:3000/confirmation"
+    // }
 
     async function postData(url=''){
         const response = await  fetch(url, requestOptions)
