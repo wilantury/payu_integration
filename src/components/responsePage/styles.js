@@ -9,17 +9,16 @@ export const ResponseDataWrapper = styled.div`
     box-shadow: 0px 1px 24px 5px rgba(0,0,0,0.46);
     -webkit-box-shadow: 0px 1px 24px 5px rgba(0,0,0,0.46);
     -moz-box-shadow: 0px 1px 24px 5px rgba(0,0,0,0.46);
-    & ul {
-        list-style: none;
-        padding-inline-start:0px;
-        & li {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            justify-items: start;
-        }
-    }
-
 `
+export const ResponseSuccess = styled.div`
+    & p {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        justify-items: start;
+        align-items: center;
+    }
+`
+
 
 export const Button = styled.button`
   color: gray;
