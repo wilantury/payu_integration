@@ -12,7 +12,7 @@ export const CartPage = () => {
     const tax = tax_p*total;
 
     const responsePage = "https://payu-ecommerce.netlify.app/response"
-    //const responsePage = "http://localhost:3000/response"
+    const confirmationPage = "https://antury-payu.herokuapp.com/api/v1/confirmation/"
 
     const apiKey = "4Vj8eK4rloUd272L48hsrarnUA";
     const merchantId ="508029";
@@ -50,7 +50,7 @@ export const CartPage = () => {
                 <input name="shippingCountry"    type="hidden"  value="CO" />
                 <input name="telephone"    type="hidden"  value="312456789" />
                 <input name="responseUrl"    type="hidden"  value={responsePage} />
-                <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" />
+                <input name="confirmationUrl"    type="hidden"  value={confirmationPage} />
                 <Button name="Submit"        type="submit" >Pagar con PayU</Button>
             </form>
         </CartListWrapper>
