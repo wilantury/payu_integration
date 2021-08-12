@@ -12,7 +12,6 @@ function useQuery() {
 export const ResponsePage = () => {
  
     let query = useQuery();
-    let data = []
     let responseSuccessPayU = query.get("transactionState")
     
     return (
