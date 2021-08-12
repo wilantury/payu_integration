@@ -1,4 +1,3 @@
-import { BiStore, BiUserCircle, BiCartAlt } from 'react-icons/bi';
 import React, {useState ,useContext} from 'react';
 import { CardWrapper, Img, AddListWrapper } from './styles'
 import CartContext from '../../context/CartContext'
