@@ -8,6 +8,7 @@ import {
 import { Header } from './components/header'
 import { ProductsList } from './components/productsList'
 import {ResponsePage} from './components/responsePage'
+import { CartPage } from './components/cartPage'
 import CartContext from '../src/context/CartContext'
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
             <Route path="/" exact component={ProductsList}></Route>
             <Route path="/response" >
               <ResponsePage />
+            </Route>
+            <Route path="/cart" >
+              <CartPage />
             </Route>
           </Switch>
         </div>
