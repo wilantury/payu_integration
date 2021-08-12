@@ -1,4 +1,6 @@
 import React from 'react'
+import {ResponseDataWrapper} from './styles'
+
 import {
     useLocation,
   } from "react-router-dom";
@@ -10,8 +12,20 @@ function useQuery() {
 export const ResponsePage = () => {
  
     let query = useQuery();
+    let data = []
 
     return (
-        <p>Holaaaaaaa {query.get("name")}</p>
+        <ResponseDataWrapper>
+            <ul>
+                {
+                    query.forEach( (value, key)=>{
+                        data.push({value, key})    
+                    })
+                }
+                {    
+                    data.map( param => <li><p>{param.key}</p><p>{param.value}</p></li>)
+                }
+            </ul>
+        </ResponseDataWrapper>
     )
 }

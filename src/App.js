@@ -4,8 +4,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useLocation,
-  Link
 } from "react-router-dom";
 import { Header } from './components/header'
 import { ProductsList } from './components/productsList'

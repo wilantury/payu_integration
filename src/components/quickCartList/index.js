@@ -32,6 +32,7 @@ export const QuickCartList = ( {data} ) => {
 
     var requestOptions = {
         method: 'POST',
+        mode:'no-cors',
         headers: myHeaders,
         body: urlencoded,
         redirect: 'follow'
@@ -60,7 +61,7 @@ export const QuickCartList = ( {data} ) => {
 
     async function postData(url=''){
         const response = await  fetch(url, requestOptions)
-        console.log(response.status)
+        console.log(response)
         return response
     }
     
