@@ -29,13 +29,14 @@ export const Header = ({clickBody}) => {
             </Link>
             <DivCart >
                 <BiUserCircle size='40px' /> 
-                <BiCartAlt size='40px' color="lightblue" cursor="pointer" 
-                    onMouseEnter={()=>setQuickViewCart(true)} /> 
-                <h3>{totalUnits}</h3>
-                { quickViewCart && (
-                    <QuickCartList data={CartData}/>
-                    )
-                }
+
+                    <BiCartAlt size='40px' color="lightblue" cursor="pointer" 
+                        onMouseEnter={()=>setQuickViewCart(true)} /> 
+                    <h3>{totalUnits}</h3>
+                    { quickViewCart && (
+                        <QuickCartList data={CartData}/>
+                        )
+                    }
             </DivCart>
         </HeaderWrapper>
     )

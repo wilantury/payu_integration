@@ -12,7 +12,8 @@ export const CartPage = () => {
     const tax = tax_p*total;
 
     const responsePage = "https://payu-ecommerce.netlify.app/response"
-    const confirmationPage = "https://antury-payu.herokuapp.com/api/v1/confirmation/"
+    const confirmationPage = "https://antury-payu.herokuapp.com/api/v1/confirmation"
+    //const confirmationPage = "https://28bb2bd14130.ngrok.io/api/v1/confirmation"
 
     const apiKey = "4Vj8eK4rloUd272L48hsrarnUA";
     const merchantId ="508029";
@@ -42,7 +43,7 @@ export const CartPage = () => {
                 <input name="taxReturnBase" type="hidden"  value={total} />
                 <input name="currency"      type="hidden"  value="COP" />
                 <input name="signature"     type="hidden"  value={hashDigest}  />
-                <input name="test"          type="hidden"  value="0" />
+                <input name="test"          type="hidden"  value="1" />
                 <input name="buyerEmail"    type="hidden"  value="test@test.com" />
                 <input name="buyerFullName"    type="hidden"  value="Wilson Antury" />
                 <input name="shippingAddress"    type="hidden"  value="Cra 10 20-56" />
